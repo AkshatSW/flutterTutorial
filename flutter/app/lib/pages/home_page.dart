@@ -15,7 +15,8 @@ class _HomePageState extends State<HomePage> {
   TextEditingController _nameController =
       TextEditingController(); //_nameController me _ use karne se ye ek private value ho jayegi
   var myText = "Change Me";
-  var url = "https://jsonplaceholder.typicode.com/photos";
+  var url =
+      "https://jsonplaceholder.typicode.com/photos"; //is link se ham json ka data laa rahe hai
   var data;
 
   void initState() {
@@ -49,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                       child: ListTile(
                         title: Text(data[index]["title"]),
                         subtitle: Text("ID: ${data[index]["id"]}"),
-                        leading: Image.network(data[index]["url"]),
+                        leading: Image.network(data[index]["thumbnailUrl"]),
                       ),
                     );
                   },
